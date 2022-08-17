@@ -36,8 +36,7 @@ def add_bg_from_local(image_file):
 add_bg_from_local('stock chart.jpeg')
 def homepage():
 
-    st.header("Vivek Khetan's stock analysis and visualization")
-    st.subheader('Email: vkhetan@falcon.bentley.edu, Phone Number: (857) 364-9196')
+    st.header("Stock Forecast Analytics")
     st.text("")
     st.text("")
     st.text("")
