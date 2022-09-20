@@ -33,7 +33,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('stock chart.jpeg')
+
 def homepage():
 
     st.header("Stock Forecast Analytics")
@@ -56,6 +56,12 @@ def homepage():
                            data= file,
                            file_name='Resume.pdf'
         )
+    st.text("")
+    st.text("")
+    st.text("")
+    from PIL import Image
+    image = Image.open('My project.jpg')
+    st.image(image)
 def subheader(df):
     col1, col2, col3 = st.columns(3)
     col1.subheader(f"${df['Close'].tail(1).iloc[0]:.2f}")
@@ -165,16 +171,20 @@ def main():
     if select == 'Historical Data':
         mainHeader()
         overview()
+        add_bg_from_local('stock chart.jpeg')
     elif select == 'Homepage':
         homepage()
     elif select == 'Forecast':
         mainHeader()
+        add_bg_from_local('stock chart.jpeg')
         prediction()
     elif select == 'Stock Type Forecast':
         mainHeader()
+        add_bg_from_local('stock chart.jpeg')
         forecast()
     else:
         mainHeader()
+        add_bg_from_local('stock chart.jpeg')
         sk()
 
 main()
