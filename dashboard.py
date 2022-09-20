@@ -9,7 +9,6 @@ from sklearn import preprocessing
 from sklearn.linear_model import Ridge
 
 
-
 ticker_name = st.sidebar.text_input("Enter Company Ticker: ").upper()
 df = pd.DataFrame()
 hasError = False
@@ -171,20 +170,19 @@ def main():
     if select == 'Historical Data':
         mainHeader()
         overview()
-        add_bg_from_local('stock chart.jpeg')
+
     elif select == 'Homepage':
         homepage()
     elif select == 'Forecast':
         mainHeader()
-        add_bg_from_local('stock chart.jpeg')
+
         prediction()
     elif select == 'Stock Type Forecast':
         mainHeader()
-        add_bg_from_local('stock chart.jpeg')
+
         forecast()
     else:
         mainHeader()
-        add_bg_from_local('stock chart.jpeg')
         sk()
 
 main()
